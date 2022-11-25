@@ -22,7 +22,7 @@ function keyPress(){
 }
 function highlightText(index){
     // index+=countSpaces(textPara.innerText.slice(0,index))
-    textPara.innerHTML = "<span id=\"highlight\">"+ textPara.innerText.slice(0,index) + "</span>" + textPara.innerText.slice(index,textPara.innerText.length)
+    textPara.innerHTML = "<span id=\"highlight-success\">"+ textPara.innerText.slice(0,index) + "</span>" + textPara.innerText.slice(index,textPara.innerText.length)
 }
 
 function countSpaces(str){

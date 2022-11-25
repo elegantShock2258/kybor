@@ -27,10 +27,12 @@ textarea{
     color:transparent;
 }
 
-#highlight{
+#highlight-success{
     color:azure;
 }
-
+#highight-failure{
+    color:greenyellow;
+}
 .text{
     font-family: 'JetBrains Mono', monospace;
     padding: 10%;
