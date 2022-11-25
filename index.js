@@ -15,14 +15,14 @@ function buildDummyPara(){
 function keyPress(){
     document.addEventListener("keydown", ((e)=>{
         console.log(String.fromCharCode(e.keyCode || e.which).toLocaleLowerCase(), textPara.innerText.charAt(count))
-        if(String.fromCharCode(e.keyCode || e.which).toLocaleLowerCase() == textPara.innerText.charAt(count)) highlightText(count+1)
-        else console.log("key code")
+        if(String.fromCharCode(e.keyCode || e.which).toLocaleLowerCase() == textPara.innerText.charAt(count)) highlightText(count+1,"success")
+        else highlightText(count+1,"failure")
         count++
     }))
 }
-function highlightText(index){
+function highlightText(index,state){
     // index+=countSpaces(textPara.innerText.slice(0,index))
-    textPara.innerHTML = "<span id=\"highlight-success\">"+ textPara.innerText.slice(0,index) + "</span>" + textPara.innerText.slice(index,textPara.innerText.length)
+    textPara.innerHTML = `<span id=\"highlight-${state}\">`+ textPara.innerText.slice(0,index) + "</span>" + textPara.innerText.slice(index,textPara.innerText.length)
 }
 
 function countSpaces(str){

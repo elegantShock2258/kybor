@@ -1,6 +1,8 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-// add dummy
-// add punctuation support
+// add wrong word highlight
+// add completion screen
+// add stats
+
 var randomWords = require('random-words')
 let textPara = document.getElementsByClassName("text")[0]
 let DummyWords = 15 
@@ -14,14 +16,14 @@ function buildDummyPara(){
 function keyPress(){
     document.addEventListener("keydown", ((e)=>{
         console.log(String.fromCharCode(e.keyCode || e.which).toLocaleLowerCase(), textPara.innerText.charAt(count))
-        if(String.fromCharCode(e.keyCode || e.which).toLocaleLowerCase() == textPara.innerText.charAt(count)) highlightText(count+1)
-        else console.log("key code")
+        if(String.fromCharCode(e.keyCode || e.which).toLocaleLowerCase() == textPara.innerText.charAt(count)) highlightText(count+1,"success")
+        else highlightText(count+1,"failure")
         count++
     }))
 }
-function highlightText(index){
+function highlightText(index,state){
     // index+=countSpaces(textPara.innerText.slice(0,index))
-    textPara.innerHTML = "<span id=\"highlight\">"+ textPara.innerText.slice(0,index) + "</span>" + textPara.innerText.slice(index,textPara.innerText.length)
+    textPara.innerHTML = `<span id=\"highlight-${state}\">`+ textPara.innerText.slice(0,index) + "</span>" + textPara.innerText.slice(index,textPara.innerText.length)
 }
 
 function countSpaces(str){
