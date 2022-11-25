@@ -1,0 +1,23 @@
+{
+  "name": "kybor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify main.js -o bundle.js; firefox index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elegantShock2258/kybor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elegantShock2258/kybor/issues"
+  },
+  "homepage": "https://github.com/elegantShock2258/kybor#readme",
+  "dependencies": {
+    "random-words": "^1.2.0",
+    "require.js": "^1.0.0"
+  }
+}

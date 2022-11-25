@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html{
+    margin: 0%;
+    padding: 0%;
+}
+*{
+    margin: inherit;
+    padding: inherit;
+}
+
+body{
+    background-color: #353535;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    margin:0;
+    padding: 0;
+}
+
+textarea{
+    background-color:transparent;
+    color:transparent;
+}
+
+#highlight{
+    color:azure;
+}
+
+.text{
+    font-family: 'JetBrains Mono', monospace;
+    padding: 10%;
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: #606060;
+}
